@@ -1,0 +1,23 @@
+body{
+    padding: 20px;
+}
+
+.image{
+    outline: rgb(241, 1, 1) 2px solid;
+    
+}
+
+article{
+    outline: black 2px solid;
+    
+}
+
+ul{
+    padding: 20px;
+}
+
+.searchHeader{
+    position: fixed;
+
+}
+
