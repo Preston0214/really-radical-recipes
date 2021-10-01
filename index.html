@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Really Radical Recipes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <p>this project is going to be totally rad!!!!!!!</p>
+    <div style="background: rgb(109, 119, 109)" class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 style="color: white" class="display-4">Really Radical Recipes</h1>
+          <p style="font-weight: bold" class="lead">Search for a recipe below</p>
+        </div>
+      </div>
+
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-6 d-flex justify-content-center">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Search for a recipe</h5>
+              <input name="recipe" id="recipe" type="text" autofocus="true" class="card-text form-input col-12" placeholder="Pasta"/>
+              <button id="searchBtn" type="submit" class="btn btn-primary col-12 my-3">Search</button>
+            </div>
+          </div>
+    </div>
+
+    <div class="row col-12 d-flex justify-content-center p-5" id="recentSearches">
+        <h2>Recently Viewed Recipes:</h2>
+    </div>
+    
+
+
+
+
+
+    <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src ="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src = "assets/script.js"></script>
 </body>
 </html>
