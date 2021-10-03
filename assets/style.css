@@ -21,3 +21,11 @@ ul{
 
 }
 
+#searchBtn{
+    background-color: slategray;
+    border: slategray;
+}
+
+#searchBtn:hover{
+    background-color: rgb(121, 58, 7);
+}
