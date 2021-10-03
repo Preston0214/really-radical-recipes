@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="./assets/glide.core.css">
     <link rel="stylesheet" href="./assets/glide.theme.css"/>
     <link rel="stylesheet" href="./assets/style.css">
@@ -27,8 +28,26 @@
     
 <body>
   <header>
-
+    <div style="background-image: url(https://crossroads.ca/wp-content/uploads/2020/06/cooking-banner-d.jpg); background-repeat: no-repeat;" class="jumbotron jumbotron-fluid">
+      <div class="p-4">
+        <h1 style="color: white" class="display-4">Really Radical Recipes</h1>
+        <p style="color:white;" class="lead">Search for a recipe below</p>
+      </div>
+    </div>
   </header>
+
+  <div class="row">
+    <div class="col-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Search for a new recipe</h5>
+          <input name="recipe" id="recipe" type="text" autofocus="true" class="card-text form-input col-12" placeholder="Pasta"/>
+          <button id="searchBtn" type="submit" class="btn btn-primary col-6 my-3">Search</button>
+        </div>
+      </div>
+    </div>
+ 
+
     <div class="container">
       <div class="glide">
         <div class="glide__track" data-glide-el="track">
@@ -45,6 +64,8 @@
         </div>
       </div>
     </div>
+
+  </div>
     
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script>
