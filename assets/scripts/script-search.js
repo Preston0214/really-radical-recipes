@@ -31,6 +31,7 @@ function collectUserData (event) {
   let userIngredients = userInput.val();
   //collect more than one incredient into a string with no spaces
   //thinking gif
+
   fetchRecepies(userIngredients); 
 }
 
