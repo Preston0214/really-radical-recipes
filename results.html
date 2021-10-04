@@ -12,17 +12,13 @@
 </head>
 
 <style>
-  html, body {
-    height: 100%
+  .carouselContainer {
+    margin: 0 auto;
   }
 
-  .container {
-    height: 60vh;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
+  img {
+    width: 100%;
+    
   }
 </style>
     
@@ -35,9 +31,9 @@
       </div>
     </div>
   </header>
-
+  
   <div class="row">
-    <div class="col-3">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Search for a new recipe</h5>
@@ -46,10 +42,10 @@
         </div>
       </div>
     </div>
- 
-
-    <div class="container">
-      <div class="glide">
+    
+    
+    <div class="carouselContainer row col-12 col-sm-12 col-md-6 col-lg-9">
+      <div class="glide ">
         <div class="glide__track" data-glide-el="track">
 
           <ul class="glide__slides">
