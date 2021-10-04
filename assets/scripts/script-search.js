@@ -29,10 +29,13 @@ function collectUserData (event) {
   event.preventDefault();
   let userIngredients = userInput.val();
   //move user to next page
+  
   //collect more than one incredient into a string with no spaces
   //thinking gif
 
   fetchRecepies(userIngredients);
+
+  window.location.href="./assets/html/results.html";
 }
 
 searchBtn.on('click', collectUserData)
