@@ -11,6 +11,8 @@ function fetchRecepies(userIngredients){
     if(res.ok){
       res.json().then( function (data){
         console.log(data)
+        
+        populateCards(data);
         //collect data in variables
         //send to function to populate results page
       })
@@ -37,6 +39,16 @@ function collectUserData (event) {
 
 searchBtn.on('click', collectUserData)
 
+
+function populateCards (data) {
+  for (var i = 0; i < 10; i++) {
+    console.log(i);
+    var listItem = $("#resultsList").children().eq(i);
+    listItem.find("img").attr('src', data[i].image);
+    listItem.find("h5").text(data[i].title);
+  }
+}
+
 //user fills out search field
 //call the api based on user input
 //brings you to results page
@@ -45,3 +57,4 @@ searchBtn.on('click', collectUserData)
 //user selects results of thier choice
 //user is brought to recipe page 
 //recipe page is populated by JS with data for selected result
+
