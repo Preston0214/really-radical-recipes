@@ -35,7 +35,6 @@ function collectUserData (event) {
 
   fetchRecepies(userIngredients);
 
-  window.location.href="./assets/html/results.html";
 }
 
 searchBtn.on('click', collectUserData)
