@@ -3,11 +3,9 @@ let userInput = $('#userSearch');
 
 const apiUrl = 'https://api.spoonacular.com/recipes/findByIngredients?ingredients=';
 const apikey = '&apiKey=e31330a3bd494aaa8323e1a4293b775d';
-'apples'
 
 
 function fetchRecepies(userIngredients){
-
   fetch(apiUrl + userIngredients + apikey)
   .then(function (res){
     if(res.ok){
@@ -22,20 +20,18 @@ function fetchRecepies(userIngredients){
   })
   .catch(function (error){
     alert('unable to connect')
+    console.log(error)
   })
 }
+
+
 
 function collectUserData (event) {
   event.preventDefault();
   let userIngredients = userInput.val();
-  //move user to next page
-  
   //collect more than one incredient into a string with no spaces
   //thinking gif
-
-  fetchRecepies(userIngredients);
-
-  window.location.href="./assets/html/results.html";
+  fetchRecepies(userIngredients); 
 }
 
 searchBtn.on('click', collectUserData)
