@@ -45,9 +45,11 @@ function populateCards (data) {
     console.log(i);
     var listItem = $("#resultsList").children().eq(i);
     listItem.find("img").attr('src', data[i].image);
-    listItem.find("h5").text(data[i].title);
+    listItem.find("span").text(data[i].title);
   }
 }
+
+
 
 //user fills out search field
 //call the api based on user input
