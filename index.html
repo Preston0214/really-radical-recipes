@@ -38,13 +38,13 @@
 </div>
 </div>
     
-    <div class="carouselContainer row col-12 ">
+    <div class="carouselContainer row col-12 col-lg-4 ">
       <div class="glide">
         <div class="glide__track" data-glide-el="track">
           
           <ul id="resultsList" class="glide__slides">
             <li class="glide__slide">
-              <div class="card" style="width: 24rem;">
+              <div class="card" style="width: 100%;">
                 <img src="./assets/images/frog.jpg" class="card-img-top"  alt="">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -54,7 +54,7 @@
             </li>
             
             <li class="glide__slide">
-              <div class="card" style="width: 24rem;">
+              <div class="card" style="width: 100%;">
                 <img src="./assets/images/frog.jpg" class="card-img-top" alt="">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -64,7 +64,7 @@
             </li>
 
             <li class="glide__slide">
-              <div class="card" style="width: 24rem;">
+              <div class="card" style="width: 100%;">
                 <img src="./assets/images/frog.jpg" class="card-img-top" alt="">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -74,7 +74,7 @@
             </li>
 
             <li class="glide__slide">
-              <div class="card" style="width: 24rem;">
+              <div class="card" style="width: 100%;">
                 <img src="./assets/images/frog.jpg" class="card-img-top" alt="">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -84,7 +84,7 @@
             </li>
 
             <li class="glide__slide">
-              <div class="card" style="width: 24rem;">
+              <div class="card" style="width: 100%;">
                 <img src="./assets/images/frog.jpg" class="card-img-top" alt="">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -94,7 +94,7 @@
             </li>
 
             <li class="glide__slide">
-              <div class="card" style="width: 24rem;">
+              <div class="card" style="width: 100%;">
                 <img src="./assets/images/frog.jpg" class="card-img-top" alt="">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -104,7 +104,7 @@
             </li>
 
             <li class="glide__slide">
-              <div class="card" style="width: 24rem;">
+              <div class="card" style="width: 100%;">
                 <img src="./assets/images/frog.jpg" class="card-img-top" alt="">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -114,7 +114,7 @@
             </li>
 
             <li class="glide__slide">
-              <div class="card" style="width: 24rem;">
+              <div class="card" style="width: 100%;">
                 <img src="./assets/images/frog.jpg" class="card-img-top" alt="">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -124,7 +124,7 @@
             </li>
 
             <li class="glide__slide">
-              <div class="card" style="width: 24rem;">
+              <div class="card" style="width: 100%;">
                 <img src="./assets/images/frog.jpg" class="card-img-top" alt="">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -134,7 +134,7 @@
             </li>
 
             <li class="glide__slide">
-              <div class="card" style="width: 24rem;">
+              <div class="card" style="width: 100%;">
                 <img src="./assets/images/frog.jpg" class="card-img-top" alt="">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -161,18 +161,18 @@
       const config ={
         type: 'carousel',
         startAt:0,
-        perView:4,
-        breakpoints:{
-          1612:{
-            perView:3
-          },
-          1218:{
-            perView:2
-          },
-          832:{
-            perView:1
-          }
-        }
+        perView:1,
+        // breakpoints:{
+        //   1612:{
+        //     perView:3
+        //   },
+        //   1218:{
+        //     perView:2
+        //   },
+        //   832:{
+        //     perView:1
+        //   }
+        // }
       }
 
       new Glide('.glide', config).mount() 
