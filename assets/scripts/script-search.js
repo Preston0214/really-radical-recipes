@@ -5,7 +5,7 @@ var recipeBtn = $('.recipeButton');
 // console.log(recipeId);
 
 const apiUrl = 'https://api.spoonacular.com/recipes/findByIngredients?ingredients=';
-const apikey = '&apiKey=e31330a3bd494aaa8323e1a4293b775d';
+const apikey = '&apiKey=f6afd4ae0a8c4afc84874cd3960737aa';
 
 
 function fetchRecepies(userIngredients){
