@@ -13,7 +13,6 @@ function fetchRecepies(userIngredients){
   .then(function (res){
     if(res.ok){
       res.json().then( function (data){
-        console.log(data);
         $('#carouselExampleCaptions').css('visibility', 'visible');
         populateCards(data);
         //collect data in variables
@@ -44,7 +43,6 @@ searchBtn.on('click', collectUserData)
 
 function populateCards (data) {
   for (var i = 0; i < 10; i++) {
-    console.log(i);
     var listItem = $("#resultsList").children().eq(i);
     listItem.find("img").attr('src', data[i].image);
     listItem.find("span").text(data[i].title);
