@@ -19,16 +19,14 @@ function getFullInfo(){
   getFullInfo()
 
   function populatePage(data){
-recipeImage.attr('src', data.image)
-recipeTitle.text(data.title)
-recipeSummary.html(data.summary)
-var ingredientsArray = data.extendedIngredients;
-for(var i=0; i<ingredientsArray.length; i++){
-    var listItem = $('<li>').text(ingredientsArray[i].name)
-    recipeIngredients.append(listItem)
-    console.log(listItem)
-}
-recipeLink.onclick = function () {
-    location.href = data.sourceUrl
-}
+    recipeImage.attr('src', data.image)
+    recipeTitle.text(data.title)
+    recipeSummary.html(data.summary)
+    var ingredientsArray = data.extendedIngredients;
+    for(var i=0; i<ingredientsArray.length; i++){
+        var listItem = $('<li>').text(ingredientsArray[i].name)
+        recipeIngredients.append(listItem)
+        console.log(listItem)
+    }
+    recipeLink.attr('href', data.sourceUrl)
   }
