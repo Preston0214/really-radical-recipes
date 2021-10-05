@@ -1,8 +1,8 @@
 let searchBtn = $("#searchBtn");
 let userInput = $('#userSearch');
 var recipeBtn = $('.recipeButton');
-var recipeId;
-
+// var recipeId = localStorage.getItem('recipeId');
+// console.log(recipeId);
 
 const apiUrl = 'https://api.spoonacular.com/recipes/findByIngredients?ingredients=';
 const apikey = '&apiKey=e31330a3bd494aaa8323e1a4293b775d';
@@ -14,7 +14,7 @@ function fetchRecepies(userIngredients){
     if(res.ok){
       res.json().then( function (data){
         console.log(data)
-        
+        $('#carouselExampleCaptions').css('visibility', 'visible');
         populateCards(data);
         //collect data in variables
         //send to function to populate results page
@@ -28,18 +28,6 @@ function fetchRecepies(userIngredients){
     console.log(error)
   })
 }
-
-function getFullInfo(){
-  fetch('https://api.spoonacular.com/recipes/'+recipeId+'/information?apiKey=e31330a3bd494aaa8323e1a4293b775d')
-  .then(function (res){
-    if(res.ok){
-      res.json().then(function(data){
-        console.log(data)
-      })
-    }
-  })
-}
-
 
 
 function collectUserData (event) {
