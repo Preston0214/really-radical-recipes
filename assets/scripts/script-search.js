@@ -13,8 +13,8 @@ function fetchRecepies(userIngredients){
   .then(function (res){
     if(res.ok){
       res.json().then( function (data){
-        console.log(data)
-        
+        console.log(data);
+        $('#carouselExampleCaptions').css('visibility', 'visible');
         populateCards(data);
         //collect data in variables
         //send to function to populate results page
