@@ -13,7 +13,7 @@ After selecting a recipe the user is brought to a page containing a summary of t
 -Preston Conley 
 
 # Screenshot of website
-![image](./assets/images/screenshot.png)
+![image](./assets/images/screenshot1.png)
 
 # Deployed page
 
