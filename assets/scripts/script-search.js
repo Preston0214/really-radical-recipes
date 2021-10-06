@@ -13,7 +13,6 @@ function fetchRecepies(userIngredients){
   .then(function (res){
     if(res.ok){
       res.json().then( function (data){
-        console.log(data)
         if(data.length ===0){
           alert('There are no results for that.')
         }
@@ -22,12 +21,10 @@ function fetchRecepies(userIngredients){
       })
     }else {
       alert('problem occured' + res.statusText)
-      console.log(res)
     }
   })
   .catch(function (error){
     alert('unable to connect')
-    console.log(error)
   })
 }
 
@@ -42,6 +39,7 @@ searchBtn.on('click', collectUserData)
 
 
 function populateCards (data) {
+  $(".carousel-inner").empty();
   for (var i = 0; i < data.length; i++) {
     var listItem = $(`<li data-target="#carouselExampleCaptions" data-slide-to="${i+1}">`);
     
@@ -52,7 +50,7 @@ function populateCards (data) {
     var headerItem = $('<h5 class="m-4">');
     var spanItem = $('<span class="p-2 carousel-span">').text(data[i].title);
     var aItem = $(`<a href="./assets/html/recipe-page.html" class="btn btn-primary recipeButton" data-id="${data[i].id}">`).text('More Info');
-
+    console.log(data[i].id);
     headerItem.append(spanItem);
     divCaption.append(headerItem).append(aItem);
     divItem.append(imgItem).append(divCaption);
@@ -66,25 +64,10 @@ function populateCards (data) {
     orderedList.append(listItem[0]);
     resultsList.append(divItem[0])
   }
+  $('.recipeButton').on('click',function(){
+    recipeId = $(this).data().id;
+    localStorage.setItem('recipeId', recipeId)
+  })
 }
 
-
-recipeBtn.on('click',function(){
-  recipeId = $(this).data().id;
-  console.log(recipeId);
-  console.log('clicked')
-  localStorage.setItem('recipeId', recipeId)
-})
-
-
-
-
-//user fills out search field
-//call the api based on user input
-//brings you to results page
-//results page shows a few results recipes from the api
-//user can scroll through the results 
-//user selects results of thier choice
-//user is brought to recipe page 
-//recipe page is populated by JS with data for selected result
 

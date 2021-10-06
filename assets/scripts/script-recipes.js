@@ -10,7 +10,6 @@ function getFullInfo(){
     .then(function (res){
       if(res.ok){
         res.json().then(function(data){
-          console.log(data)
           populatePage(data)
         })
       }
@@ -26,7 +25,6 @@ function getFullInfo(){
     for(var i=0; i<ingredientsArray.length; i++){
         var listItem = $('<li>').text(ingredientsArray[i].name)
         recipeIngredients.append(listItem)
-        console.log(listItem)
     }
     recipeLink.attr('href', data.sourceUrl)
   }
