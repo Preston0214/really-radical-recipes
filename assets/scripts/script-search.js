@@ -14,7 +14,9 @@ function fetchRecepies(userIngredients){
     if(res.ok){
       res.json().then( function (data){
         console.log(data)
-
+        if(data.length ===0){
+          alert('There are no results for that.')
+        }
         $('#carouselExampleCaptions').css('visibility', 'visible');
         populateCards(data);
       })
