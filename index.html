@@ -11,7 +11,7 @@
       <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
-    <div style="background-image: url(https://crossroads.ca/wp-content/uploads/2020/06/cooking-banner-d.jpg); background-repeat: no-repeat; background-size: cover;" class="jumbotron jumbotron-fluid">
+    <div style="background-image: url(https://crossroads.ca/wp-content/uploads/2020/06/cooking-banner-d.jpg); background-repeat: no-repeat; background-size: cover;" class="jumbotron jumbotron-fluid" id="header">
       <div class="p-4">
         <h1 style="color: white" class="display-4 animate__animated animate__fadeInUp">Really Radical Recipes</h1>
         <p style="color:white;" class="lead animate__animated animate__fadeInDown">Search for a recipe below</p>
@@ -21,10 +21,12 @@
     <div class="row d-flex justify-content-center">
       <div class="col-sm-6 d-flex justify-content-center">
         <div class="card">
-          <div class="card-body">
+          <div class="card-body searchForm">
             <h5 class="card-title">Search for a recipe by ingredients</h5>
-            <input name="recipe" id="userSearch" type="text" autofocus="true" class="card-text form-input col-12" placeholder="Ex. Apples, Cinnamon"/>
-            <button id="searchBtn" type="submit" class="btn btn-primary col-12 my-3">Search</button>
+              <form>
+                <input name="recipe" id="userSearch" type="text" autofocus="true" class="card-text form-input col-12" placeholder="Ex. Apples, Cinnamon"/>
+                <button id="searchBtn" type="submit" class="btn btn-primary col-12 my-3">Search</button>
+              </form>
           </div>
         </div>
       </div>
@@ -38,7 +40,13 @@
         
       </ol>
       <div class="carousel-inner" id="resultsList">
-        
+        <div class="carousel-item">
+          <img src="./assets/images/loadinganim.gif" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="m-4"><span class="p-2 carousel-span"> Text</span></h5>
+            <a href="./assets/html/recipe-page.html" class="btn btn-primary recipeButton" data-id="">More Info</a>
+          </div>
+        </div>
       </div>
 
       <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">

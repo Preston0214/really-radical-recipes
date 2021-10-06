@@ -11,10 +11,6 @@ ul{
     padding: 20px;
 }
 
-.searchHeader{
-    position: fixed;
-}
-
 #searchBtn{
     background-color: slategray;
     border: slategray;
@@ -63,4 +59,8 @@ img {
 #recipe-link{
     margin-top: 10px;
     margin-bottom: 20px;
+}
+
+.searchForm{
+    box-shadow: rgb(82, 82, 82) 4px 4px 4px 4px;
 }
