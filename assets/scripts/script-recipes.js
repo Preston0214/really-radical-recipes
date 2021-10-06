@@ -6,7 +6,7 @@ var recipeLink = $('#recipe-link');
 var recipeSummary = $('#recipe-summary');
 
 function getFullInfo(){
-    fetch('https://api.spoonacular.com/recipes/'+recipeId+'/information?apiKey=f6afd4ae0a8c4afc84874cd3960737aa')
+    fetch('https://api.spoonacular.com/recipes/'+recipeId+'/information?apiKey=e31330a3bd494aaa8323e1a4293b775d')
     .then(function (res){
       if(res.ok){
         res.json().then(function(data){
