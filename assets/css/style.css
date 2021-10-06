@@ -1,5 +1,6 @@
 body{
     padding: 20px;
+    background-color: rgb(252, 243, 230);
 }
 
 article{
@@ -40,4 +41,26 @@ img {
     border: rgb(43, 42, 42); 
     border-radius: 4px; 
     display: block;
+}
+
+#recipe-image{
+    border: white 10px solid;
+    box-shadow: rgb(82, 82, 82) 4px 4px 4px 4px;
+    margin-bottom: 20px;
+}
+
+#recipeHolder{
+    border: rgba(94, 94, 94, 0.651) 10px solid;
+    box-shadow: rgb(82, 82, 82) 4px 4px 4px 4px;
+    margin-right: 15px;
+    background-color: white;
+}
+
+#header{
+    box-shadow: rgb(82, 82, 82) 4px 4px 4px 4px;
+}
+
+#recipe-link{
+    margin-top: 10px;
+    margin-bottom: 20px;
 }

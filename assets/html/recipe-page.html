@@ -11,8 +11,8 @@
         
     </head>
     <body>
-        <div class='container'></div>
-        <div style="background-image: url(https://crossroads.ca/wp-content/uploads/2020/06/cooking-banner-d.jpg); background-repeat: no-repeat; background-size: cover;" class="jumbotron jumbotron-fluid">
+        <!-- <div class='container'></div> -->
+        <div style="background-image: url(https://crossroads.ca/wp-content/uploads/2020/06/cooking-banner-d.jpg); background-repeat: no-repeat; background-size: cover;" class="jumbotron jumbotron-fluid" id='header'>
             <div class="p-4">
                 <h1 style="color: white" class="display-4 animate__animated animate__fadeInUp">Really Radical Recipes</h1>
                 <a href="../../index.html" class="btn btn-outline-light animate__animated animate__fadeInDown">Home</a>
@@ -20,16 +20,20 @@
         </div>
  
         <div class='row d-flex'>
-            <div class='image col-4'>
+            <div class='image col-7 col-lg-4'>
                 <img id="recipe-image" src='../images/loadinganim.gif'>
             </div>
-            <div class=' col-1'></div>
-            <h2 id="recipe-title" class='col-7'></h2>
-            <p id="recipe-summary"></p>
-            <a id="recipe-link" target="_blank">See Full Recipe</a>
-            <ul id="recipe-ingredients" class='mx-auto'>
+            <div class='col-0 col-lg-1'></div>
+            <div class='row col-7' id='recipeHolder'>
+                <h2 id="recipe-title" class='col-7'></h2>
+                <p id="recipe-summary"></p>
+                <h3 class='col-12 mx-auto'>Ingredients:</h3>
+                <ul id="recipe-ingredients" class=' col-12 col-lg-2'></ul>
+                <a id="recipe-link" target="_blank" class="col-12">See Full Recipe</a>
+            
+            </div>
                 
-            </ul>
+            
         </div>
     <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src = "../scripts/script-recipes.js"></script>
