@@ -5,7 +5,7 @@ var orderedList = $(".carousel-indicators");
 var resultsList = $('#resultsList');
 
 const apiUrl = 'https://api.spoonacular.com/recipes/findByIngredients?ingredients=';
-const apikey = '&apiKey=f6afd4ae0a8c4afc84874cd3960737aa';
+const apikey = '&apiKey=e31330a3bd494aaa8323e1a4293b775d';
 
 
 function fetchRecepies(userIngredients){
