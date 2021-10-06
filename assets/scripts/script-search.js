@@ -39,6 +39,7 @@ searchBtn.on('click', collectUserData)
 
 
 function populateCards (data) {
+  $('.carousel-indicators').empty();
   $(".carousel-inner").empty();
   for (var i = 0; i < data.length; i++) {
     var listItem = $(`<li data-target="#carouselExampleCaptions" data-slide-to="${i+1}">`);
