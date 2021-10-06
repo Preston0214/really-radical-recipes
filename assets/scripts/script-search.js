@@ -1,8 +1,8 @@
 let searchBtn = $("#searchBtn");
 let userInput = $('#userSearch');
 var recipeBtn = $('.recipeButton');
-// var recipeId = localStorage.getItem('recipeId');
-// console.log(recipeId);
+var orderedList = $(".carousel-indicators");
+var resultsList = $('#resultsList');
 
 const apiUrl = 'https://api.spoonacular.com/recipes/findByIngredients?ingredients=';
 const apikey = '&apiKey=f6afd4ae0a8c4afc84874cd3960737aa';
@@ -13,13 +13,14 @@ function fetchRecepies(userIngredients){
   .then(function (res){
     if(res.ok){
       res.json().then( function (data){
+        console.log(data)
+
         $('#carouselExampleCaptions').css('visibility', 'visible');
         populateCards(data);
-        //collect data in variables
-        //send to function to populate results page
       })
     }else {
       alert('problem occured' + res.statusText)
+      console.log(res)
     }
   })
   .catch(function (error){
@@ -32,9 +33,6 @@ function fetchRecepies(userIngredients){
 function collectUserData (event) {
   event.preventDefault();
   let userIngredients = userInput.val();
-  //collect more than one incredient into a string with no spaces
-  //thinking gif
-
   fetchRecepies(userIngredients); 
 }
 
@@ -42,12 +40,29 @@ searchBtn.on('click', collectUserData)
 
 
 function populateCards (data) {
-  for (var i = 0; i < 10; i++) {
-    var listItem = $("#resultsList").children().eq(i);
-    listItem.find("img").attr('src', data[i].image);
-    listItem.find("span").text(data[i].title);
-    listItem.find('a').attr('data-id', data[i].id)
+  for (var i = 0; i < data.length; i++) {
+    var listItem = $(`<li data-target="#carouselExampleCaptions" data-slide-to="${i+1}">`);
     
+
+    var divItem = $('<div class="carousel-item">');
+    var imgItem = $(`<img src="${data[i].image}" class="d-block w-100" alt="...">`);
+    var divCaption = $('<div class="carousel-caption d-none d-md-block">');
+    var headerItem = $('<h5 class="m-4">');
+    var spanItem = $('<span class="p-2 carousel-span">').text(data[i].title);
+    var aItem = $(`<a href="./assets/html/recipe-page.html" class="btn btn-primary recipeButton" data-id="${data[i].id}">`).text('More Info');
+
+    headerItem.append(spanItem);
+    divCaption.append(headerItem).append(aItem);
+    divItem.append(imgItem).append(divCaption);
+
+    if(i+1 === 1){
+      listItem.addClass('active');
+      divItem.addClass('active');
+
+    };
+    
+    orderedList.append(listItem[0]);
+    resultsList.append(divItem[0])
   }
 }
 
