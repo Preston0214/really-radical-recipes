@@ -2,14 +2,8 @@ body{
     padding: 20px;
 }
 
-.image{
-    outline: rgb(241, 1, 1) 2px solid;
-    
-}
-
 article{
     outline: black 2px solid;
-    
 }
 
 ul{
@@ -18,7 +12,6 @@ ul{
 
 .searchHeader{
     position: fixed;
-
 }
 
 #searchBtn{
@@ -32,16 +25,19 @@ ul{
 
 .carouselContainer {
     margin: 0 auto;
-  }
+}
 
-  img {
+img {
     width: 100%;
-  }
+}
 
-  /* .card{
-      width: 100%;
-  } */
+#carouselExampleCaptions {
+    visibility: hidden;
+}
 
-  #carouselExampleCaptions {
-      visibility: hidden;
-  }
+.carousel-span {
+    background-color: rgb(43, 42, 42); 
+    border: rgb(43, 42, 42); 
+    border-radius: 4px; 
+    display: block;
+}
