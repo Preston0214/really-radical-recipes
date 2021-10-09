@@ -47,7 +47,7 @@ function populateCards (data) {
 
     var divItem = $('<div class="carousel-item">');
     var imgItem = $(`<img src="${data[i].image}" class="d-block w-100" alt="...">`);
-    var divCaption = $('<div class="carousel-caption d-none d-md-block">');
+    var divCaption = $('<div class="carousel-caption">');
     var headerItem = $('<h5 class="m-4">');
     var spanItem = $('<span class="p-2 carousel-span">').text(data[i].title);
     var aItem = $(`<a href="./assets/html/recipe-page.html" class="btn btn-primary recipeButton" data-id="${data[i].id}">`).text('More Info');
